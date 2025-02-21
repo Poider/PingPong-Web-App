@@ -1,67 +1,101 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Ping Pong Web App
+
+This web application is a fully-featured Ping Pong game built using modern web technologies. It incorporates real-time communication, matchmaking, user interaction, and 3D graphics for an immersive experience.
+
+## Technologies Used
+
+- **Backend**: Built with **NestJS** and **Socket.IO** for real-time communication.
+- **Frontend**: Developed using **React** for a dynamic, responsive user interface.
+- **Authentication**: Uses **JWT** (JSON Web Tokens) for secure user authentication.
+- **3D Graphics**: Powered by **Three.js** for rich 3D visualizations.
+- **State Management**: **React State** and context are used for efficient state management across the app.
+- **Containerization**: The app is containerized using **Docker** for easy deployment and environment consistency.
+- **Database**: **PostgreSQL** for data storage and management.
+
+## Features
+
+- **Real-Time Gameplay**: Play against others in real-time, using **Socket.IO** for smooth multiplayer interactions.
+- **Matchmaking**: Automated matchmaking system to find players based on skill and availability.
+- **User Accounts**: Secure sign-up and login with **JWT** for authentication.
+- **3D Gameplay**: Interactive 3D game environment rendered using **Three.js** and **Blender** assets.
+- **Chat System**: Integrated chat for players to communicate during games.
+- **Leaderboard**: Track and view player rankings in the leaderboard.
+- **Friends & Groups**: Create groups, add friends, and organize matches together.
+- **Docker Support**: Set up with **Docker** for an easy-to-deploy environment.
+
+## 🚀 Check Out the Demo in Action!  
 
 
-https://github.com/user-attachments/assets/cd2fc062-0ed8-4ac3-a43e-5b21a5415234
+https://github.com/user-attachments/assets/fe203c90-6eaf-4681-bccb-d5777dbd193e
 
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Setup
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-```install node
-#set .env in src
-      DB_HOST
-      DB_PORT
-      DB_USERNMAE
-      DB_PASSWORD
-      DB_DATABASE
-#set .env in postgres
-      POSTGRESQL_PASS
-      DB_NAME
-      PMA_HOST
-      PMA_PORT
-      PGADMIN_DEFAULT_EMAIL
-      PGADMIN_DEFAULT_PASSWORD
-
-#run the db
-
-#npm install
-
-#nest --watch
-```
-
-
-
-## Test
+### 1. Clone the repository
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+git clone https://github.com/yourusername/pingpong-web-app.git
 ```
 
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Set up Docker
+
+Run the `init_docker.sh` script to initialize Docker.
+
+```bash
+./init_docker.sh
+```
+
+### 5. Running PostgreSQL with Docker
+
+Navigate to the `/postgresql` directory and run:
+
+```bash
+docker-compose up -d
+```
+
+Make sure PostgreSQL is up and running before starting the application.
+
+### 6. Start the application
+
+For development:
+
+```bash
+npm run start:dev
+```
+
+For production:
+
+```bash
+npm run start:prod
+```
+
+
+## Tests
+
+Run unit tests:
+
+```bash
+npm run test
+```
+
+Run e2e tests:
+
+```bash
+npm run test:e2e
+```
+
+Check test coverage:
+
+```bash
+npm run test:cov
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
