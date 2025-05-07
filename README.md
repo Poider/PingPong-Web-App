@@ -34,7 +34,7 @@ https://github.com/user-attachments/assets/fe203c90-6eaf-4681-bccb-d5777dbd193e
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/pingpong-web-app.git
+git clone https://github.com/Poider/pingpong-web-app.git
 ```
 
 ### 2. Install dependencies
